@@ -1,7 +1,5 @@
 export type FoodItem = "banana" | "fish" | "melon" | "meat" | "wheat";
 
-// export type ToShip = Record<FoodItem, number>;
-
 export type ToShip = Record<FoodItem, number>;
 
 export interface Truck {
