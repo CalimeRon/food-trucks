@@ -36,14 +36,12 @@ const cheapestCombination = (toShip: ToShip): void => {
 
     const addTruck = (truck: Truck): void => {
       const addedTruck = { ...truck };
-      if (fullItem) {
-        addedTruck.currentWeight += fullItem.weight;
-        addedTruck.count = 1;
-        addedTruck.volume -= fullItem.volume;
-        currentCost += addedTruck.price;
-        currentFleet.push(addedTruck);
-        truck.count--;
-      }
+      addedTruck.currentWeight += fullItem.weight;
+      addedTruck.count = 1;
+      addedTruck.volume -= fullItem.volume;
+      currentCost += addedTruck.price;
+      currentFleet.push(addedTruck);
+      truck.count--;
     };
 
     const removeTruck = (truck: Truck): void => {
